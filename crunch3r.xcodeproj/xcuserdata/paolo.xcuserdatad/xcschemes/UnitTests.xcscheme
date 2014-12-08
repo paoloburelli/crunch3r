@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5239A82F1A35AE0700DE7F30"
-               BuildableName = "Unit Tests"
-               BlueprintName = "Unit Tests"
+               BuildableName = "UnitTests"
+               BlueprintName = "UnitTests"
                ReferencedContainer = "container:crunch3r.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5239A82F1A35AE0700DE7F30"
-            BuildableName = "Unit Tests"
-            BlueprintName = "Unit Tests"
+            BuildableName = "UnitTests"
+            BlueprintName = "UnitTests"
             ReferencedContainer = "container:crunch3r.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -52,8 +52,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5239A82F1A35AE0700DE7F30"
-            BuildableName = "Unit Tests"
-            BlueprintName = "Unit Tests"
+            BuildableName = "UnitTests"
+            BlueprintName = "UnitTests"
             ReferencedContainer = "container:crunch3r.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -70,8 +70,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5239A82F1A35AE0700DE7F30"
-            BuildableName = "Unit Tests"
-            BlueprintName = "Unit Tests"
+            BuildableName = "UnitTests"
+            BlueprintName = "UnitTests"
             ReferencedContainer = "container:crunch3r.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

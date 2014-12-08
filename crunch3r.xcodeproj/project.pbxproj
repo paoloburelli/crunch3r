@@ -20,6 +20,16 @@
 		5239A8581A35AECC00DE7F30 /* libcrunch3r.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5239A7E21A35AC1000DE7F30 /* libcrunch3r.dylib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		52460AC41A35B8D000754F36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5239A7DA1A35AC1000DE7F30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5239A7E11A35AC1000DE7F30;
+			remoteInfo = crunch3r;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		5239A82E1A35AE0700DE7F30 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -68,7 +78,7 @@
 		5239A7ED1A35AC3900DE7F30 /* crunch3r.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crunch3r.h; sourceTree = "<group>"; };
 		5239A7EE1A35AC3900DE7F30 /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
 		5239A7EF1A35AC3900DE7F30 /* vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vector.cpp; sourceTree = "<group>"; };
-		5239A8301A35AE0700DE7F30 /* Unit Tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Unit Tests"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5239A8301A35AE0700DE7F30 /* UnitTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTests; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +94,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				521558A91A35B4F6005A6795 /* libgtest_main.a in Frameworks */,
-				5239A8581A35AECC00DE7F30 /* libcrunch3r.dylib in Frameworks */,
 				521558A81A35B4F6005A6795 /* libgtest.a in Frameworks */,
+				5239A8581A35AECC00DE7F30 /* libcrunch3r.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				5239A7E21A35AC1000DE7F30 /* libcrunch3r.dylib */,
-				5239A8301A35AE0700DE7F30 /* Unit Tests */,
+				5239A8301A35AE0700DE7F30 /* UnitTests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,9 +234,9 @@
 			productReference = 5239A7E21A35AC1000DE7F30 /* libcrunch3r.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
-		5239A82F1A35AE0700DE7F30 /* Unit Tests */ = {
+		5239A82F1A35AE0700DE7F30 /* UnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5239A8341A35AE0700DE7F30 /* Build configuration list for PBXNativeTarget "Unit Tests" */;
+			buildConfigurationList = 5239A8341A35AE0700DE7F30 /* Build configuration list for PBXNativeTarget "UnitTests" */;
 			buildPhases = (
 				5239A82C1A35AE0700DE7F30 /* Sources */,
 				5239A82D1A35AE0700DE7F30 /* Frameworks */,
@@ -235,10 +245,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				52460AC51A35B8D000754F36 /* PBXTargetDependency */,
 			);
-			name = "Unit Tests";
+			name = UnitTests;
 			productName = "Unit Tests";
-			productReference = 5239A8301A35AE0700DE7F30 /* Unit Tests */;
+			productReference = 5239A8301A35AE0700DE7F30 /* UnitTests */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -271,7 +282,7 @@
 			projectRoot = "";
 			targets = (
 				5239A7E11A35AC1000DE7F30 /* crunch3r */,
-				5239A82F1A35AE0700DE7F30 /* Unit Tests */,
+				5239A82F1A35AE0700DE7F30 /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,6 +307,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52460AC51A35B8D000754F36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5239A7E11A35AC1000DE7F30 /* crunch3r */;
+			targetProxy = 52460AC41A35B8D000754F36 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5239A7E41A35AC1000DE7F30 /* Debug */ = {
@@ -335,6 +354,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SYMROOT = "$(PROJECT_DIR)/build";
 			};
 			name = Debug;
 		};
@@ -369,6 +389,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SYMROOT = "$(PROJECT_DIR)/build";
 			};
 			name = Release;
 		};
@@ -377,6 +398,7 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@executable_path/";
 				EXECUTABLE_PREFIX = lib;
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
 					"SSE=1",
@@ -396,6 +418,7 @@
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@executable_path/";
 				EXECUTABLE_PREFIX = lib;
 				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "SSE=1";
 				LIBRARY_SEARCH_PATHS = (
@@ -468,7 +491,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5239A8341A35AE0700DE7F30 /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
+		5239A8341A35AE0700DE7F30 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5239A8351A35AE0700DE7F30 /* Debug */,
