@@ -7,25 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520A36311A35BFD000448041 /* libcrunch3r.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 52460AD21A35BE3800754F36 /* libcrunch3r.dylib */; };
+		520A363C1A35D63400448041 /* algebra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5239A7E91A35AC3900DE7F30 /* algebra.cpp */; };
+		520A363D1A35D63E00448041 /* algebra.h in Headers */ = {isa = PBXBuildFile; fileRef = 5239A7EA1A35AC3900DE7F30 /* algebra.h */; };
 		521558A81A35B4F6005A6795 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 521558A51A35B4F6005A6795 /* libgtest.a */; };
 		521558A91A35B4F6005A6795 /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 521558A61A35B4F6005A6795 /* libgtest_main.a */; };
 		521558AA1A35B4F6005A6795 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 521558A71A35B4F6005A6795 /* main.cpp */; };
-		5239A7F01A35AC3900DE7F30 /* algebra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5239A7E91A35AC3900DE7F30 /* algebra.cpp */; };
-		5239A7F11A35AC3900DE7F30 /* algebra.h in Headers */ = {isa = PBXBuildFile; fileRef = 5239A7EA1A35AC3900DE7F30 /* algebra.h */; };
-		5239A7F21A35AC3900DE7F30 /* matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 5239A7EB1A35AC3900DE7F30 /* matrix.h */; };
-		5239A7F31A35AC3900DE7F30 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5239A7EC1A35AC3900DE7F30 /* matrix.cpp */; };
-		5239A7F41A35AC3900DE7F30 /* crunch3r.h in Headers */ = {isa = PBXBuildFile; fileRef = 5239A7ED1A35AC3900DE7F30 /* crunch3r.h */; };
-		5239A7F51A35AC3900DE7F30 /* vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 5239A7EE1A35AC3900DE7F30 /* vector.h */; };
-		5239A7F61A35AC3900DE7F30 /* vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5239A7EF1A35AC3900DE7F30 /* vector.cpp */; };
-		5239A8581A35AECC00DE7F30 /* libcrunch3r.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5239A7E21A35AC1000DE7F30 /* libcrunch3r.dylib */; };
+		52460AD61A35BE8200754F36 /* algebra.h in Headers */ = {isa = PBXBuildFile; fileRef = 5239A7EA1A35AC3900DE7F30 /* algebra.h */; };
+		52460AD71A35BE8200754F36 /* matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 5239A7EB1A35AC3900DE7F30 /* matrix.h */; };
+		52460AD81A35BE8200754F36 /* crunch3r.h in Headers */ = {isa = PBXBuildFile; fileRef = 5239A7ED1A35AC3900DE7F30 /* crunch3r.h */; };
+		52460AD91A35BE8200754F36 /* vector.h in Headers */ = {isa = PBXBuildFile; fileRef = 5239A7EE1A35AC3900DE7F30 /* vector.h */; };
+		52460ADA1A35BE8B00754F36 /* algebra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5239A7E91A35AC3900DE7F30 /* algebra.cpp */; };
+		52460ADB1A35BE8B00754F36 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5239A7EC1A35AC3900DE7F30 /* matrix.cpp */; };
+		52460ADC1A35BE8B00754F36 /* vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5239A7EF1A35AC3900DE7F30 /* vector.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		52460AC41A35B8D000754F36 /* PBXContainerItemProxy */ = {
+		520A36321A35BFDB00448041 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5239A7DA1A35AC1000DE7F30 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5239A7E11A35AC1000DE7F30;
+			remoteGlobalIDString = 52460AD11A35BE3800754F36;
 			remoteInfo = crunch3r;
 		};
 /* End PBXContainerItemProxy section */
@@ -43,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		520A36381A35D62000448041 /* libcrunch3r_algebra.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcrunch3r_algebra.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		5215588B1A35B4F6005A6795 /* gtest-death-test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "gtest-death-test.h"; sourceTree = "<group>"; };
 		5215588C1A35B4F6005A6795 /* gtest-message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "gtest-message.h"; sourceTree = "<group>"; };
 		5215588D1A35B4F6005A6795 /* gtest-param-test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "gtest-param-test.h"; sourceTree = "<group>"; };
@@ -70,7 +73,6 @@
 		521558A51A35B4F6005A6795 /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgtest.a; sourceTree = "<group>"; };
 		521558A61A35B4F6005A6795 /* libgtest_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libgtest_main.a; sourceTree = "<group>"; };
 		521558A71A35B4F6005A6795 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		5239A7E21A35AC1000DE7F30 /* libcrunch3r.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcrunch3r.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		5239A7E91A35AC3900DE7F30 /* algebra.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = algebra.cpp; sourceTree = "<group>"; };
 		5239A7EA1A35AC3900DE7F30 /* algebra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = algebra.h; sourceTree = "<group>"; };
 		5239A7EB1A35AC3900DE7F30 /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
@@ -79,10 +81,11 @@
 		5239A7EE1A35AC3900DE7F30 /* vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vector.h; sourceTree = "<group>"; };
 		5239A7EF1A35AC3900DE7F30 /* vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vector.cpp; sourceTree = "<group>"; };
 		5239A8301A35AE0700DE7F30 /* UnitTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTests; sourceTree = BUILT_PRODUCTS_DIR; };
+		52460AD21A35BE3800754F36 /* libcrunch3r.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcrunch3r.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5239A7DF1A35AC1000DE7F30 /* Frameworks */ = {
+		520A36351A35D62000448041 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,9 +96,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520A36311A35BFD000448041 /* libcrunch3r.dylib in Frameworks */,
 				521558A91A35B4F6005A6795 /* libgtest_main.a in Frameworks */,
 				521558A81A35B4F6005A6795 /* libgtest.a in Frameworks */,
-				5239A8581A35AECC00DE7F30 /* libcrunch3r.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52460ACF1A35BE3800754F36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,8 +204,9 @@
 		5239A7E31A35AC1000DE7F30 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5239A7E21A35AC1000DE7F30 /* libcrunch3r.dylib */,
 				5239A8301A35AE0700DE7F30 /* UnitTests */,
+				52460AD21A35BE3800754F36 /* libcrunch3r.dylib */,
+				520A36381A35D62000448041 /* libcrunch3r_algebra.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,35 +214,43 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		5239A7E01A35AC1000DE7F30 /* Headers */ = {
+		520A36361A35D62000448041 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5239A7F41A35AC3900DE7F30 /* crunch3r.h in Headers */,
-				5239A7F51A35AC3900DE7F30 /* vector.h in Headers */,
-				5239A7F11A35AC3900DE7F30 /* algebra.h in Headers */,
-				5239A7F21A35AC3900DE7F30 /* matrix.h in Headers */,
+				520A363D1A35D63E00448041 /* algebra.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52460AD01A35BE3800754F36 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52460AD61A35BE8200754F36 /* algebra.h in Headers */,
+				52460AD71A35BE8200754F36 /* matrix.h in Headers */,
+				52460AD81A35BE8200754F36 /* crunch3r.h in Headers */,
+				52460AD91A35BE8200754F36 /* vector.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5239A7E11A35AC1000DE7F30 /* crunch3r */ = {
+		520A36371A35D62000448041 /* crunch3r_algebra */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5239A7E61A35AC1000DE7F30 /* Build configuration list for PBXNativeTarget "crunch3r" */;
+			buildConfigurationList = 520A36391A35D62000448041 /* Build configuration list for PBXNativeTarget "crunch3r_algebra" */;
 			buildPhases = (
-				5239A7DE1A35AC1000DE7F30 /* Sources */,
-				5239A7DF1A35AC1000DE7F30 /* Frameworks */,
-				5239A7E01A35AC1000DE7F30 /* Headers */,
+				520A36341A35D62000448041 /* Sources */,
+				520A36351A35D62000448041 /* Frameworks */,
+				520A36361A35D62000448041 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = crunch3r;
-			productName = crunch3r;
-			productReference = 5239A7E21A35AC1000DE7F30 /* libcrunch3r.dylib */;
+			name = crunch3r_algebra;
+			productName = crunch3r_algebra;
+			productReference = 520A36381A35D62000448041 /* libcrunch3r_algebra.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 		5239A82F1A35AE0700DE7F30 /* UnitTests */ = {
@@ -245,12 +264,29 @@
 			buildRules = (
 			);
 			dependencies = (
-				52460AC51A35B8D000754F36 /* PBXTargetDependency */,
+				520A36331A35BFDB00448041 /* PBXTargetDependency */,
 			);
 			name = UnitTests;
 			productName = "Unit Tests";
 			productReference = 5239A8301A35AE0700DE7F30 /* UnitTests */;
 			productType = "com.apple.product-type.tool";
+		};
+		52460AD11A35BE3800754F36 /* crunch3r */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52460AD31A35BE3800754F36 /* Build configuration list for PBXNativeTarget "crunch3r" */;
+			buildPhases = (
+				52460ACE1A35BE3800754F36 /* Sources */,
+				52460ACF1A35BE3800754F36 /* Frameworks */,
+				52460AD01A35BE3800754F36 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = crunch3r;
+			productName = "crunche3r++";
+			productReference = 52460AD21A35BE3800754F36 /* libcrunch3r.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
 
@@ -261,10 +297,13 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Paolo Burelli";
 				TargetAttributes = {
-					5239A7E11A35AC1000DE7F30 = {
+					520A36371A35D62000448041 = {
 						CreatedOnToolsVersion = 6.0;
 					};
 					5239A82F1A35AE0700DE7F30 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					52460AD11A35BE3800754F36 = {
 						CreatedOnToolsVersion = 6.0;
 					};
 				};
@@ -281,20 +320,19 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5239A7E11A35AC1000DE7F30 /* crunch3r */,
 				5239A82F1A35AE0700DE7F30 /* UnitTests */,
+				52460AD11A35BE3800754F36 /* crunch3r */,
+				520A36371A35D62000448041 /* crunch3r_algebra */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5239A7DE1A35AC1000DE7F30 /* Sources */ = {
+		520A36341A35D62000448041 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5239A7F31A35AC3900DE7F30 /* matrix.cpp in Sources */,
-				5239A7F01A35AC3900DE7F30 /* algebra.cpp in Sources */,
-				5239A7F61A35AC3900DE7F30 /* vector.cpp in Sources */,
+				520A363C1A35D63400448041 /* algebra.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,17 +344,57 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		52460ACE1A35BE3800754F36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52460ADA1A35BE8B00754F36 /* algebra.cpp in Sources */,
+				52460ADB1A35BE8B00754F36 /* matrix.cpp in Sources */,
+				52460ADC1A35BE8B00754F36 /* vector.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		52460AC51A35B8D000754F36 /* PBXTargetDependency */ = {
+		520A36331A35BFDB00448041 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5239A7E11A35AC1000DE7F30 /* crunch3r */;
-			targetProxy = 52460AC41A35B8D000754F36 /* PBXContainerItemProxy */;
+			target = 52460AD11A35BE3800754F36 /* crunch3r */;
+			targetProxy = 520A36321A35BFDB00448041 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		520A363A1A35D62000448041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@executable_path";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		520A363B1A35D62000448041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@executable_path";
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		5239A7E41A35AC1000DE7F30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -393,46 +471,10 @@
 			};
 			name = Release;
 		};
-		5239A7E71A35AC1000DE7F30 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@executable_path/";
-				EXECUTABLE_PREFIX = lib;
-				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
-					"SSE=1",
-					"$(inherited)",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/gtest/lib",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		5239A7E81A35AC1000DE7F30 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@executable_path/";
-				EXECUTABLE_PREFIX = lib;
-				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "SSE=1";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/gtest/lib",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		5239A8351A35AE0700DE7F30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -455,6 +497,7 @@
 		5239A8361A35AE0700DE7F30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -470,9 +513,49 @@
 			};
 			name = Release;
 		};
+		52460AD41A35BE3800754F36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@executable_path";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		52460AD51A35BE3800754F36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@executable_path";
+				EXECUTABLE_PREFIX = lib;
+				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		520A36391A35D62000448041 /* Build configuration list for PBXNativeTarget "crunch3r_algebra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				520A363A1A35D62000448041 /* Debug */,
+				520A363B1A35D62000448041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		5239A7DD1A35AC1000DE7F30 /* Build configuration list for PBXProject "crunch3r" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -482,20 +565,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5239A7E61A35AC1000DE7F30 /* Build configuration list for PBXNativeTarget "crunch3r" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5239A7E71A35AC1000DE7F30 /* Debug */,
-				5239A7E81A35AC1000DE7F30 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		5239A8341A35AE0700DE7F30 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5239A8351A35AE0700DE7F30 /* Debug */,
 				5239A8361A35AE0700DE7F30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52460AD31A35BE3800754F36 /* Build configuration list for PBXNativeTarget "crunch3r" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52460AD41A35BE3800754F36 /* Debug */,
+				52460AD51A35BE3800754F36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

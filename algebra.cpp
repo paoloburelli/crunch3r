@@ -32,7 +32,7 @@ float* vector_scale(const float a[4], const float b[4], float result[4]) {
     return result;
 }
 
-float* vector_scale(const float a[4], const float b, float result[4]) {
+float* vector_float_scale(const float a[4], const float b, float result[4]) {
 #ifdef SSE
     _mm_store_ps(result, _mm_mul_ps(_mm_load_ps(a),_mm_load1_ps(&b)));
 #else

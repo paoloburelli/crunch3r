@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52460AD11A35BE3800754F36"
-               BuildableName = "libcrunch3r.dylib"
-               BlueprintName = "crunch3r"
+               BlueprintIdentifier = "520A36371A35D62000448041"
+               BuildableName = "libcrunch3r_algebra.dylib"
+               BlueprintName = "crunch3r_algebra"
                ReferencedContainer = "container:crunch3r.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52460AD11A35BE3800754F36"
-            BuildableName = "libcrunch3r.dylib"
-            BlueprintName = "crunch3r"
+            BlueprintIdentifier = "520A36371A35D62000448041"
+            BuildableName = "libcrunch3r_algebra.dylib"
+            BlueprintName = "crunch3r_algebra"
             ReferencedContainer = "container:crunch3r.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,9 +60,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "52460AD11A35BE3800754F36"
-            BuildableName = "libcrunch3r.dylib"
-            BlueprintName = "crunch3r"
+            BlueprintIdentifier = "520A36371A35D62000448041"
+            BuildableName = "libcrunch3r_algebra.dylib"
+            BlueprintName = "crunch3r_algebra"
             ReferencedContainer = "container:crunch3r.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

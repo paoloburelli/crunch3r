@@ -55,7 +55,7 @@ namespace  crunch3r {
     public:
         inline static float dot(const Vector& a, const Vector& b) {return vector_dot(a.values, b.values);};
         inline static Vector& scale(const Vector& a, const Vector& b) {return *(new Vector(vector_scale(a.values, b.values,new float[4]),a.getDimensions()));};
-        inline static Vector& scale(const Vector& a, const float b) {return *(new Vector(vector_scale(a.values, b,new float[4]),a.getDimensions()));};
+        inline static Vector& scale(const Vector& a, const float b) {return *(new Vector(vector_float_scale(a.values, b,new float[4]),a.getDimensions()));};
         inline static Vector& cross(const Vector& a,const Vector& b) {return *(new Vector(vector_cross(a.values, b.values, new float[4]),a.getDimensions()));};
         
         static const Vector UP;
