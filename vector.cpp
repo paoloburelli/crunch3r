@@ -11,54 +11,53 @@
 using namespace crunch3r;
 
 Vector::Vector(std::initializer_list<float> seq){
-    size = seq.size() > MAX_SIZE ? MAX_SIZE : (unsigned int)seq.size();
+    size = seq.size() > VECTOR_MAX_SIZE ? VECTOR_MAX_SIZE : (unsigned int)seq.size();
     
-    values = new float[MAX_SIZE];
-    memset(values, 0, MAX_MEM_SIZE);
+    values = new float[VECTOR_MAX_SIZE];
+    memset(values, 0, VECTOR_MEMORY);
     
     int i =0;
     for (float f: seq)
-        if (i<MAX_SIZE)
+        if (i<VECTOR_MAX_SIZE)
             values[i++] = f;
 }
 
 Vector::Vector(float*f,unsigned int dimensions){
     values = f;
     size = dimensions;
-    delete f;
 }
 
 Vector::Vector(const Vector& other){
-    values = new float[MAX_SIZE];
-    memcpy(values, other.values, MAX_MEM_SIZE);
+    values = new float[VECTOR_MAX_SIZE];
+    memcpy(values, other.values, VECTOR_MEMORY);
     size = other.getDimensions();
 }
 
 Vector::Vector(const Vector& other, unsigned int size){
-    values = new float[MAX_SIZE];
-    memset(values, 0, MAX_MEM_SIZE);
+    values = new float[VECTOR_MAX_SIZE];
+    memset(values, 0, VECTOR_MEMORY);
     memcpy(values, other.values, sizeof(float)*size);
     this->size = size;
 }
 
 bool Vector::operator==(const Vector other) const{
     ///TODO: float comparison
-    return memcmp(values, other.values, MAX_MEM_SIZE) == 0;
+    return memcmp(values, other.values, VECTOR_MEMORY) == 0;
 }
 
 bool Vector::operator!=(const Vector other) const {
     ///TODO: float comparison
-    return memcmp(values, other.values, MAX_MEM_SIZE) != 0;
+    return memcmp(values, other.values, VECTOR_MEMORY) != 0;
 }
 
 
 float& Vector::operator[](const unsigned int i){
-    assert(i<MAX_SIZE);
+    assert(i<VECTOR_MAX_SIZE);
     return values[i];
 }
 
 float Vector::operator[](const unsigned int i) const{
-    assert(i<MAX_SIZE);
+    assert(i<VECTOR_MAX_SIZE);
     return values[i];
 }
 

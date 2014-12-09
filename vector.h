@@ -9,8 +9,8 @@
 #ifndef Crunch3r_Vector_h
 #define Crunch3r_Vector_h
 
-#define MAX_SIZE 4
-#define MAX_MEM_SIZE sizeof(float)*MAX_SIZE
+#define VECTOR_MAX_SIZE 4
+#define VECTOR_MEMORY sizeof(float)*VECTOR_MAX_SIZE
 
 #include <math.h>
 #include <exception>
@@ -26,15 +26,17 @@
 namespace  crunch3r {
     
     class Vector {
+    friend class Matrix4x4;
     private:
         Vector(float *, unsigned int);
         float* values;
         unsigned int size;
     protected:
-        Vector(std::initializer_list<float> seq);
         Vector(const Vector& other, unsigned int);
     public:
         Vector(const Vector& other);
+        Vector(std::initializer_list<float> seq);
+        inline ~Vector() {delete values;};
         inline float magnitude() const { return vector_magnitude(values);};
         inline Vector& normalise(){ vector_normalise(values); return *this;};
         inline unsigned short getDimensions() const {return size;};

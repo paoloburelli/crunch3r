@@ -40,7 +40,7 @@ TEST(Vector,Scaling){
 
 
 TEST(Matrix, Allocation){
-    EXPECT_FLOAT_EQ(0, Matrix4x4().get(3,2));
+    EXPECT_FLOAT_EQ(0, Matrix4x4({}).get(3,2));
     EXPECT_FLOAT_EQ(2, Matrix4x4({2,0,0,0,0,2,0,0,0,0,2,0,0,0,0,2}).get(0,0));
     Matrix4x4 m1 = {1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1};
     EXPECT_EQ(m1,Matrix4x4({1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1}));
@@ -57,7 +57,7 @@ TEST(Matrix, Multiplication){
 }
 
 TEST(Matrix, Transpose){
-    EXPECT_EQ(Matrix4x4({1,0,0,0,0,1,0,0,0,0,1,0,10,8,12,1}),Matrix4x4({1,0,0,10,0,1,0,8,0,0,1,12,0,0,0,1}).transposed());
+    EXPECT_EQ(Matrix4x4({1,0,0,0,0,1,0,0,0,0,1,0,10,8,12,1}),Matrix4x4({1,0,0,10,0,1,0,8,0,0,1,12,0,0,0,1}).transpose());
 }
 
 TEST(Matrix, TypeCheck){
@@ -68,7 +68,7 @@ TEST(Matrix, TypeCheck){
 }
 
 TEST(Matrix, Inversion){
-    EXPECT_EQ(Matrix4x4::translate(-4, -5, -6),Matrix4x4::translate(4, 5, 6).inverted());
-    EXPECT_EQ(Matrix4x4::IDENTITY,Matrix4x4::IDENTITY.inverted());
-    EXPECT_EQ(Matrix4x4({.25f,0,0,0,0,.125f,0,0,0,0,.25f,0,0,0,0,1}),Matrix4x4::scale(4, 8, 4).inverted());
+    EXPECT_EQ(Matrix4x4::translate(-4, -5, -6),Matrix4x4::translate(4, 5, 6).invert());
+    EXPECT_EQ(Matrix4x4::IDENTITY,Matrix4x4(Matrix4x4::IDENTITY).invert());
+    EXPECT_EQ(Matrix4x4({.25f,0,0,0,0,.125f,0,0,0,0,.25f,0,0,0,0,1}),Matrix4x4::scale(4, 8, 4).invert());
 }
