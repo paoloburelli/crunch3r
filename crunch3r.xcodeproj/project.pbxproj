@@ -30,6 +30,13 @@
 			remoteGlobalIDString = 52460AD11A35BE3800754F36;
 			remoteInfo = crunch3r;
 		};
+		520A363E1A35E4F200448041 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5239A7DA1A35AC1000DE7F30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 520A36371A35D62000448041;
+			remoteInfo = crunch3r_algebra;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -264,6 +271,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				520A363F1A35E4F200448041 /* PBXTargetDependency */,
 				520A36331A35BFDB00448041 /* PBXTargetDependency */,
 			);
 			name = UnitTests;
@@ -362,6 +370,11 @@
 			target = 52460AD11A35BE3800754F36 /* crunch3r */;
 			targetProxy = 520A36321A35BFDB00448041 /* PBXContainerItemProxy */;
 		};
+		520A363F1A35E4F200448041 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 520A36371A35D62000448041 /* crunch3r_algebra */;
+			targetProxy = 520A363E1A35E4F200448041 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -369,14 +382,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@executable_path";
 				EXECUTABLE_PREFIX = lib;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
+				GCC_C_LANGUAGE_STANDARD = ansi;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
+					"SSE=1",
 					"$(inherited)",
 				);
+				INSTALL_PATH = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -386,10 +403,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@executable_path";
 				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = ansi;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "SSE=1";
+				INSTALL_PATH = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -399,7 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -414,7 +435,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -440,7 +461,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -457,7 +478,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -484,12 +505,12 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(PROJECT_DIR)/UnitTests/gtest/include",
 				);
+				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/gtest/lib",
 					"$(PROJECT_DIR)/UnitTests/gtest/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -503,12 +524,12 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(PROJECT_DIR)/UnitTests/gtest/include",
 				);
+				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/gtest/lib",
 					"$(PROJECT_DIR)/UnitTests/gtest/lib",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -521,12 +542,15 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@executable_path";
 				EXECUTABLE_PREFIX = lib;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=x86_64]" = (
+					"SSE=1",
 					"$(inherited)",
 				);
+				INSTALL_PATH = "";
 				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -539,8 +563,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@executable_path";
 				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "SSE=1";
+				INSTALL_PATH = "";
 				LD_DYLIB_INSTALL_NAME = "$(DYLIB_INSTALL_NAME_BASE:standardizepath)/$(EXECUTABLE_PATH)";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -555,6 +582,7 @@
 				520A363B1A35D62000448041 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5239A7DD1A35AC1000DE7F30 /* Build configuration list for PBXProject "crunch3r" */ = {
 			isa = XCConfigurationList;
