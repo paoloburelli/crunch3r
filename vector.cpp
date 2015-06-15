@@ -22,22 +22,25 @@ Vector::Vector(std::initializer_list<float> seq){
             values[i++] = f;
 }
 
-Vector::Vector(float*f,unsigned int dimensions){
+Vector::Vector(float*f,unsigned int dimensions, bool shallow){
     values = f;
     size = dimensions;
+    this->shallow_copy = shallow;
 }
 
-Vector::Vector(const Vector& other){
-    values = new float[VECTOR_MAX_SIZE];
-    memcpy(values, other.values, VECTOR_MEMORY);
-    size = other.getDimensions();
+Vector::Vector(const Vector& other) : Vector::Vector(other,VECTOR_MAX_SIZE){
 }
 
 Vector::Vector(const Vector& other, unsigned int size){
-    values = new float[VECTOR_MAX_SIZE];
-    memset(values, 0, VECTOR_MEMORY);
-    memcpy(values, other.values, sizeof(float)*size);
+    if (other.shallow_copy) {
+        values = other.values;
+    } else {
+        values = new float[VECTOR_MAX_SIZE];
+        memset(values, 0, VECTOR_MEMORY);
+        memcpy(values, other.values, sizeof(float)*size);
+    }
     this->size = size;
+    this->shallow_copy = other.shallow_copy;
 }
 
 bool Vector::operator==(const Vector other) const{

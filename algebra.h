@@ -30,7 +30,6 @@ float* matrix_scale(const float m[16],float a, float result[16]);
 float* matrix_vector_product(const float m[16], const float v[4], float result[4]);
 float* matrix_matrix_product(const float a[16], const float b[16], float result[16]);
 float* matrix_transpose(const float m[16], float result[16]);
-    
-}
 
+}
 #endif

@@ -20,6 +20,9 @@
 		52460ADA1A35BE8B00754F36 /* algebra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5239A7E91A35AC3900DE7F30 /* algebra.cpp */; };
 		52460ADB1A35BE8B00754F36 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5239A7EC1A35AC3900DE7F30 /* matrix.cpp */; };
 		52460ADC1A35BE8B00754F36 /* vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5239A7EF1A35AC3900DE7F30 /* vector.cpp */; };
+		529E47D11B2B140600B4A81D /* mesh.h in Headers */ = {isa = PBXBuildFile; fileRef = 529E47D01B2B140600B4A81D /* mesh.h */; };
+		529E47D41B2B155900B4A81D /* mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 529E47D31B2B155900B4A81D /* mesh.cpp */; };
+		529E47D51B2B155900B4A81D /* mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 529E47D31B2B155900B4A81D /* mesh.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,8 @@
 		5239A7EF1A35AC3900DE7F30 /* vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vector.cpp; sourceTree = "<group>"; };
 		5239A8301A35AE0700DE7F30 /* UnitTests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = UnitTests; sourceTree = BUILT_PRODUCTS_DIR; };
 		52460AD21A35BE3800754F36 /* libcrunch3r.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcrunch3r.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		529E47D01B2B140600B4A81D /* mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mesh.h; sourceTree = "<group>"; };
+		529E47D31B2B155900B4A81D /* mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mesh.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +201,8 @@
 		5239A7D91A35AC1000DE7F30 = {
 			isa = PBXGroup;
 			children = (
+				529E47D01B2B140600B4A81D /* mesh.h */,
+				529E47D31B2B155900B4A81D /* mesh.cpp */,
 				521558871A35B4F6005A6795 /* UnitTests */,
 				5239A7E91A35AC3900DE7F30 /* algebra.cpp */,
 				5239A7EA1A35AC3900DE7F30 /* algebra.h */,
@@ -233,6 +240,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529E47D11B2B140600B4A81D /* mesh.h in Headers */,
 				52460AD61A35BE8200754F36 /* algebra.h in Headers */,
 				52460AD71A35BE8200754F36 /* matrix.h in Headers */,
 				52460AD81A35BE8200754F36 /* crunch3r.h in Headers */,
@@ -348,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529E47D41B2B155900B4A81D /* mesh.cpp in Sources */,
 				521558AA1A35B4F6005A6795 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +367,7 @@
 			files = (
 				52460ADA1A35BE8B00754F36 /* algebra.cpp in Sources */,
 				52460ADB1A35BE8B00754F36 /* matrix.cpp in Sources */,
+				529E47D51B2B155900B4A81D /* mesh.cpp in Sources */,
 				52460ADC1A35BE8B00754F36 /* vector.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

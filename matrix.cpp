@@ -57,25 +57,6 @@ Matrix4x4& Matrix4x4::transpose(){
     return *this;
 }
 
-Matrix4x4& Matrix4x4::invert(){
-    switch (getType()) {
-        case Type::Identity:
-            break;
-        case Type::Scaling:
-            for (int i =0;i<4;i++)
-                set(i,i,1/this->get(i,i));
-            break;
-        case Type::Translation:
-            for (int i =0;i<3;i++)
-                set(i,3,-this->get(i,3));
-            break;
-        default:
-            throw new std::exception();
-            break;
-    }
-    return *this;
-}
-
 Matrix4x4::Type Matrix4x4::getType(){
     if ((*this) == IDENTITY) {
         return Type::Identity;

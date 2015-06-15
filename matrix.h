@@ -25,6 +25,7 @@
 namespace crunch3r {
     
     class Matrix4x4 {
+        friend class Matrix4x4;
     private:
         Matrix4x4(float* a);
         float* values;
@@ -40,14 +41,13 @@ namespace crunch3r {
         void set(unsigned int,unsigned int,float);
         float get(unsigned int, unsigned int) const;
         Matrix4x4& transpose();
-        Matrix4x4& invert();
         
         enum class Type {Translation, Scaling, Identity, Other};
         Type getType();
         
         static const Matrix4x4 IDENTITY;
-        inline static Matrix4x4& translate(float x,float y,float z){return *(new Matrix4x4({1,0,0,x,0,1,0,y,0,0,1,z,0,0,0,1}));}
-        inline static Matrix4x4& scale(float x,float y,float z){return *(new Matrix4x4({x,0,0,0,0,y,0,0,0,0,z,0,0,0,0,1}));}
+        inline static Matrix4x4& translation(float x,float y,float z){return *(new Matrix4x4({1,0,0,x,0,1,0,y,0,0,1,z,0,0,0,1}));}
+        inline static Matrix4x4& scaling(float x,float y,float z){return *(new Matrix4x4({x,0,0,0,0,y,0,0,0,0,z,0,0,0,0,1}));}
     };
     
 }

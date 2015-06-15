@@ -27,16 +27,19 @@ namespace  crunch3r {
     
     class Vector {
     friend class Matrix4x4;
+        friend class Mesh;
     private:
-        Vector(float *, unsigned int);
+        bool shallow_copy = false;
+        Vector(float *, unsigned int=4, bool=false);
         float* values;
         unsigned int size;
     protected:
         Vector(const Vector& other, unsigned int);
     public:
+        Vector() {};
         Vector(const Vector& other);
         Vector(std::initializer_list<float> seq);
-        inline ~Vector() {delete values;};
+        inline ~Vector() {if (!shallow_copy) delete values;};
         inline float magnitude() const { return vector_magnitude(values);};
         inline Vector& normalise(){ vector_normalise(values); return *this;};
         inline unsigned short getDimensions() const {return size;};

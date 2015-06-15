@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "matrix_vector_product:algebra.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "result[2]">
+            </PersistentString>
+            <PersistentString
+               value = "result[0]">
+            </PersistentString>
+            <PersistentString
+               value = "result[3]">
+            </PersistentString>
+            <PersistentString
+               value = "result[1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

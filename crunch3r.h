@@ -11,6 +11,7 @@
 
 #include "vector.h"
 #include "matrix.h"
+#include "mesh.h"
 
 
 #endif
