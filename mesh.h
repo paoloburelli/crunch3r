@@ -15,22 +15,22 @@
 #include "matrix.h"
 
 namespace crunch3r {
-    
+
     class Mesh {
     private:
-        Mesh(std::vector<Vector> vertices, std::vector<unsigned long> indices);
-        std::vector<Vector4> vertices;
         std::vector<unsigned long> indices;
-        float* vertices_data;
+        std::vector<float> vertices;
     public:
+        Mesh(){};
         Mesh(const Mesh&);
         Mesh(std::initializer_list<Vector> vertices,std::initializer_list<unsigned long> indices);
-        const Vector4 getVertex(unsigned long);
-        void setVertex(unsigned long index,const Vector4 v);
-        const unsigned long getIndex(unsigned long n) { return indices[n];}
-        void setIndex(unsigned long n, unsigned long index) { indices[n] = index;}
-        Mesh transform(Matrix4x4);
-        inline ~Mesh() {delete vertices_data;};
+        inline const Vector4 getVertex(unsigned long index) {return Vector4(this->vertices[index*4], this->vertices[index*4+1], this->vertices[index*4+2], this->vertices[index*4+3]);}
+        inline void setVertex(unsigned long index,const Vector4 v) {memcpy(&this->vertices[index*4], v.values, 4*sizeof(float));}
+        inline void addVertex(Vector4 v) {for (int i = 0;i<4;i++) this->vertices.push_back(v.values[i]);}
+        inline const unsigned long getIndex(unsigned long n) {return indices[n];}
+        inline void setIndex(unsigned long n, unsigned long index) {indices[n] = index;}
+        inline void addIndex(unsigned long index){indices.push_back(index);}
+        Mesh* transform(Matrix4x4);
     };
     
 }

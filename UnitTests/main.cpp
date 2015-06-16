@@ -13,7 +13,8 @@
 using namespace crunch3r;
 
 TEST(Vector,CrossProduct){
-    EXPECT_EQ(Vector3::UP, Vector3::cross(Vector::FORWARD, Vector::RIGHT));
+    Vector v = Vector3::cross(Vector::FORWARD, Vector::RIGHT);
+    EXPECT_EQ(Vector3::UP, v);
 }
 
 TEST(Vector,DotProduct){
@@ -77,4 +78,11 @@ TEST(Mesh, Allocation){
     m.setVertex(1,Vector4(5, 6, 7, 8));
     Vector4 a = m.getVertex(1);
     EXPECT_EQ(Vector4(5, 6, 7, 8), m.getVertex(1));
+}
+
+TEST(Mesh, Transform){
+    Mesh m = Mesh({{0,0,0,0},{0,0,0,1},Vector4::UP,Vector4::RIGHT},{0,1,2,0,0,0,0,0,0,0,0,0});
+    m.transform(Matrix4x4::translation(1, 1, 1));
+    EXPECT_EQ(Vector4(0, 0, 0, 0), m.getVertex(0));
+    EXPECT_EQ(Vector4(1, 1, 1, 1), m.getVertex(1));
 }

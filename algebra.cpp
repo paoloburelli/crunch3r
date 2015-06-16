@@ -134,10 +134,13 @@ float* matrix_vector_product(const float m[16], const float v[4], float result[4
     
     _mm_store_ps(result, _mm_add_ps(_mm_add_ps(prod1, prod2), _mm_add_ps(prod3, prod4)));
 #else
+    float tmp[4];
+    memcpy(tmp,v,4*sizeof(float));
+    
     for (int i=0;i<4;i++){
         result[i] = 0;
         for (int j=0;j<4;j++)
-            result[i] += m[i+j*4]*v[j];
+            result[i] += m[i+j*4]*tmp[j];
     }
 #endif
     

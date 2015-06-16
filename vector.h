@@ -29,9 +29,8 @@ namespace  crunch3r {
     friend class Matrix4x4;
         friend class Mesh;
     private:
-        bool shallow_copy = false;
-        Vector(float *, unsigned int=4, bool=false);
-        float* values;
+        Vector (float*,unsigned int);
+        float *values;
         unsigned int size;
     protected:
         Vector(const Vector& other, unsigned int);
@@ -39,13 +38,13 @@ namespace  crunch3r {
         Vector() {};
         Vector(const Vector& other);
         Vector(std::initializer_list<float> seq);
-        inline ~Vector() {if (!shallow_copy) delete values;};
+        ~Vector(){delete values;}
         inline float magnitude() const { return vector_magnitude(values);};
         inline Vector& normalise(){ vector_normalise(values); return *this;};
         inline unsigned short getDimensions() const {return size;};
-        inline Vector& operator-() const {return *(new Vector(vector_negate(values, new float[4]),getDimensions()));};
-        inline Vector& operator+(const Vector other) {return *(new Vector(vector_add(values, other.values, new float[4]),getDimensions()));};
-        inline Vector& operator-(const Vector other) {return *(new Vector(vector_sub(values, other.values, new float[4]),getDimensions()));};;
+        inline Vector operator-() const {return Vector(vector_negate(values, new float[VECTOR_MAX_SIZE]),getDimensions());}
+        inline Vector operator+(const Vector other) {return Vector(vector_add(values, other.values, new float[VECTOR_MAX_SIZE]),getDimensions());}
+        inline Vector operator-(const Vector other) {return Vector(vector_sub(values, other.values, new float[VECTOR_MAX_SIZE]),getDimensions());}
         bool operator==(const Vector) const;
         bool operator!=(const Vector) const;
         float& operator[](unsigned int);
@@ -58,10 +57,10 @@ namespace  crunch3r {
 #endif
         
     public:
-        inline static float dot(const Vector& a, const Vector& b) {return vector_dot(a.values, b.values);};
-        inline static Vector& scale(const Vector& a, const Vector& b) {return *(new Vector(vector_scale(a.values, b.values,new float[4]),a.getDimensions()));};
-        inline static Vector& scale(const Vector& a, const float b) {return *(new Vector(vector_float_scale(a.values, b,new float[4]),a.getDimensions()));};
-        inline static Vector& cross(const Vector& a,const Vector& b) {return *(new Vector(vector_cross(a.values, b.values, new float[4]),a.getDimensions()));};
+        inline static float dot(const Vector& a, const Vector& b) {return vector_dot(a.values, b.values);}
+        static inline Vector scale(const Vector& a, const Vector& b) {return Vector(vector_scale(a.values, b.values,new float[4]),a.getDimensions());}
+        static inline Vector scale(const Vector& a, const float b){return Vector(vector_float_scale(a.values, b,new float[4]),a.getDimensions());}
+        static inline Vector cross(const Vector& a,const Vector& b){return Vector(vector_cross(a.values, b.values,new float[4]),a.getDimensions());}
         
         static const Vector UP;
         static const Vector RIGHT;
@@ -89,7 +88,7 @@ namespace  crunch3r {
     class Vector4 : public Vector {
     public:
         inline Vector4(float x,float y, float z, float w) : Vector({x,y,z,w}){};
-        inline Vector4() : Vector({0,0,0,0}){ };
+        inline Vector4() : Vector({0,0,0,0}){};
         inline Vector4(const Vector& other) : Vector(other,4){};
     };
 }

@@ -12,6 +12,7 @@
 extern "C" {
 
 #include <math.h>
+#include <string.h>
 #ifdef SSE
 #include <pmmintrin.h>
 #endif

@@ -25,7 +25,7 @@
 namespace crunch3r {
     
     class Matrix4x4 {
-        friend class Matrix4x4;
+        friend class Mesh;
     private:
         Matrix4x4(float* a);
         float* values;
@@ -36,7 +36,7 @@ namespace crunch3r {
         bool operator==(const Matrix4x4 other) const;
         bool operator!=(const Matrix4x4 other) const;
         inline Matrix4x4& operator*(const float a) { return *(new Matrix4x4(matrix_scale(values, a, new float[MATRIX_SIZE])));};
-        inline Vector& operator*(const Vector v) { return *(new Vector(matrix_vector_product(values, v.values, new float[VECTOR_MAX_SIZE]),VECTOR_MAX_SIZE));};
+        Vector operator*(const Vector v);
         inline Matrix4x4& operator*(const Matrix4x4 other) {return *(new Matrix4x4(matrix_matrix_product(values, other.values, new float[MATRIX_SIZE])));};
         void set(unsigned int,unsigned int,float);
         float get(unsigned int, unsigned int) const;

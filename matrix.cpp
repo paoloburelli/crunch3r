@@ -40,6 +40,12 @@ bool Matrix4x4::operator!=(const Matrix4x4 other) const{
     return memcmp(values, other.values, MATRIX_MEMORY) != 0;
 }
 
+Vector Matrix4x4::operator*(const Vector v){
+    Vector rVal = Vector::ZERO;
+    matrix_vector_product(values, v.values, rVal.values);
+    return rVal;
+}
+
 void Matrix4x4::set(unsigned int row, unsigned int col, float v){
     assert(col*4+row < MATRIX_SIZE);
     values[col*4+row] = v;
