@@ -76,8 +76,9 @@ TEST(Mesh, Allocation){
     EXPECT_EQ(Vector4::RIGHT,m.getVertex(3));
     EXPECT_EQ(Vector4::UP,m.getVertex(m.getIndex(2)));
     m.setVertex(1,Vector4(5, 6, 7, 8));
-    Vector4 a = m.getVertex(1);
     EXPECT_EQ(Vector4(5, 6, 7, 8), m.getVertex(1));
+    m.addVertex(Vector4(9, 10, 7, 8));
+    EXPECT_EQ(Vector4(9, 10, 7, 8), m.getVertex(4));
 }
 
 TEST(Mesh, Transform){
@@ -85,4 +86,16 @@ TEST(Mesh, Transform){
     m.transform(Matrix4x4::translation(1, 1, 1));
     EXPECT_EQ(Vector4(0, 0, 0, 0), m.getVertex(0));
     EXPECT_EQ(Vector4(1, 1, 1, 1), m.getVertex(1));
+}
+
+TEST(Mesh, Load){
+    Mesh *m = Mesh::loadObj("cow.obj");
+    EXPECT_EQ(Vector4(2.229345,-0.992723,-0.862826,1), m->getVertex(0));
+    EXPECT_EQ(2, m->getIndex(0));
+    EXPECT_EQ(3, m->getIndex(1));
+    EXPECT_EQ(1, m->getIndex(2));
+    EXPECT_EQ(Vector4(2.410367,-0.777999,-0.841105,1), m->getVertex(m->getIndex(0)));
+    EXPECT_EQ(Vector4(2.407309,-0.974980,-0.805091,1), m->getVertex(m->getIndex(1)));
+    EXPECT_EQ(Vector4(2.292449,-0.871852,-0.882400,1), m->getVertex(m->getIndex(2)));
+    delete m;
 }

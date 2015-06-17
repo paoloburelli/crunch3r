@@ -30,7 +30,9 @@ namespace crunch3r {
         inline const unsigned long getIndex(unsigned long n) {return indices[n];}
         inline void setIndex(unsigned long n, unsigned long index) {indices[n] = index;}
         inline void addIndex(unsigned long index){indices.push_back(index);}
+        void addFace(unsigned long, unsigned long, unsigned long);
         Mesh* transform(Matrix4x4);
+        static Mesh* loadObj(const char*);
     };
     
 }
